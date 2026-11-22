@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AponiaBot - Aponia Analytics web crawler</title>
+  <style>
+    body { font-family: Georgia, serif; max-width: 40rem; margin: 4rem auto; padding: 0 1.5rem; color: #222; line-height: 1.6; }
+    h1 { font-weight: normal; }
+    code { background: #f3f3f3; padding: 0.1rem 0.3rem; }
+    pre { background: #f3f3f3; padding: 0.8rem; overflow-x: auto; }
+    footer { margin-top: 3rem; font-size: 0.85rem; color: #777; }
+    a { color: #335; }
+  </style>
+</head>
+<body>
+  <h1>AponiaBot</h1>
+  <p>AponiaBot is the web crawler of Aponia Analytics. It collects publicly available regulatory, health-technology-assessment and clinical-trial information for our research on the biomedical sector.</p>
+
+  <h2>How it identifies itself</h2>
+  <p>Every request carries this User-Agent:</p>
+  <pre>AponiaBot/1.0 (Aponia Analytics; +https://aponiaanalytics.com/bot; bot@aponiaanalytics.com)</pre>
+
+  <h2>How it behaves</h2>
+  <ul>
+    <li>It reads and obeys <code>robots.txt</code> before fetching from a site.</li>
+    <li>It spaces its requests to each site and keeps its overall request rate low.</li>
+    <li>It fetches publicly available pages and published data only.</li>
+  </ul>
+
+  <h2>How to block or limit it</h2>
+  <p>Add these lines to your site's <code>robots.txt</code>:</p>
+  <pre>User-agent: AponiaBot
+Disallow: /</pre>
+
+  <h2>Contact</h2>
+  <p>Questions or concerns: <a href="mailto:bot@aponiaanalytics.com">bot@aponiaanalytics.com</a>. We read and answer this address.</p>
+
+  <h2>Independence</h2>
+  <p>Aponia Analytics is not affiliated with, or endorsed by, any regulator, agency or other organisation whose data it reads.</p>
+
+  <footer>
+    Aponia Analytics is a trading name of Aponia Holding AS, Norway.<br>
+    <a href="/">Home</a>
+  </footer>
+</body>
+</html>
